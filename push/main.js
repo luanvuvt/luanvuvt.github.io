@@ -57,8 +57,7 @@ function initialiseState() {
           return;  
         }
         
-        // Keep your server in sync with the latest subscriptionId
-        sendSubscriptionToServer(subscription);
+        console.log(subscription);
 
         // Set your UI to show they have subscribed for  
         // push messages  
@@ -88,7 +87,7 @@ function subscribe() {
         // TODO: Send the subscription.subscriptionId and   
         // subscription.endpoint to your server  
         // and save it to send a push message at a later date   
-        return sendSubscriptionToServer(subscription);  
+        console.log(subscription);
       })  
       .catch(function(e) {  
         if (Notification.permission === 'denied') {  
