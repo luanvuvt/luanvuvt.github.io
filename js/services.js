@@ -17,6 +17,11 @@ angular.module('starter.services', ['LocalStorageModule'])
       this.code = localStorageService.get('code');
     }
 
+    API.prototype.setCode = function (code) {
+      this.code = code;
+      localStorageService.set('code', code);
+    };
+
     API.prototype._call = function (api) {
       var deferred = $q.defer();
 

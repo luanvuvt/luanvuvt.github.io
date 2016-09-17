@@ -36,13 +36,13 @@ angular.module('starter.controllers', [])
 .controller('StatementDetailCtrl', function($scope, $stateParams) {
 })
 
-.controller('CodeCtrl', function($scope, $state, localStorageService) {
+.controller('CodeCtrl', function($scope, $state, Envato) {
   $scope.form = {
     code: ''
   };
 
   $scope.submit = function () {
-    localStorageService.set('code', $scope.form.code);
+    Envato.setCode($scope.form.code);
     $state.go('tab.dash');
   };
 

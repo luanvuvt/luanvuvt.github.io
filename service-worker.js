@@ -1,8 +1,14 @@
 importScripts('sw-precache.js');
 
-/*
 setInterval(function () {
-  fetch('https://nameless-bastion-35871.herokuapp.com/api/account.json')
+  self.registration.showNotification('hello', {
+    body: 'hi',
+    icon: 'images/icon.png',
+    tag: 'envato-web-app',
+    sticky: true
+  });
+
+/*  fetch('https://nameless-bastion-35871.herokuapp.com/api/account.json')
     .then(function (response) {
       return response.json();
     })
@@ -15,5 +21,5 @@ setInterval(function () {
         tag: 'my-tag',
         sticky: true
       });
-    });
-}, 1000 * 60 * 10);*/
+    });*/
+}, 10000);
