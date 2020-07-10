@@ -1,1 +1,1 @@
-console.log('Hello from luanvuvt');
+document.querySelector('.playground').innerHTML = 'Hello';
